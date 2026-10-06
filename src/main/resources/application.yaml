@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: throttling
+  datasource:
+    url: jdbc:postgresql://localhost:5432/throttling
+    username: throttling
+    password: throttling
+
+throttling:
+  store:
+    type: memory        # memory | postgres
+  clients:
+    client-1:
+      limit: 5
+      window-seconds: 10
+    client-2:
+      limit: 3
+      window-seconds: 10
